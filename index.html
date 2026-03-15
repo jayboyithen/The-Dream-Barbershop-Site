@@ -85,7 +85,7 @@ padding-left:8%;
 }
 
 .hero h1{
-font-size:65px;
+font-size:48px;
 letter-spacing:2px;
 text-shadow:3px 3px 10px black;
 }
@@ -95,7 +95,7 @@ color:#facc15;
 }
 
 .hero p{
-margin-top:25px;
+margin-top:22px;
 max-width:700px;
 font-size:22px;
 text-shadow:3px 3px 10px black;
@@ -160,8 +160,8 @@ margin-bottom:15px;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .gallery img{
@@ -225,6 +225,22 @@ background:black;
 text-align:center;
 padding:30px;
 color:#aaa;
+}
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero{
+height:70vh;
+}
+
 }
 
 </style>
@@ -330,26 +346,30 @@ Friendly haircut service for children in a comfortable environment.
 
 <h2 class="section-title">Haircut Styles</h2>
 
-<div class="gallery">
+<div class="services">
 
-<div>
+<div class="card">
 <img src="images/haircut-style1.jpg.png">
+<h3>Modern Haircut</h3>
 <p>Modern haircut style example.</p>
 </div>
 
-<div>
+<div class="card">
 <img src="images/haircut-style2.jpg.png">
-<p>Sharp fade haircut.</p>
+<h3>Clean Fade</h3>
+<p>Sharp fade haircut with clean lines.</p>
 </div>
 
-<div>
+<div class="card">
 <img src="images/haircut-style3.jpg.png">
-<p>Professional barber design.</p>
+<h3>Professional Style</h3>
+<p>Professional haircut done with precision.</p>
 </div>
 
-<div>
+<div class="card">
 <img src="images/haircut-style4.jpg.png">
-<p>Clean modern hairstyle.</p>
+<h3>Fresh Look</h3>
+<p>Clean and modern hairstyle.</p>
 </div>
 
 </div>
@@ -362,11 +382,17 @@ Friendly haircut service for children in a comfortable environment.
 
 <h2 class="section-title">Our Team</h2>
 
-<img src="images/barber-team.jpg.png">
+<div class="services">
 
+<div class="card">
+<img src="images/barber-team.jpg.png">
+<h3>Experienced Barbers</h3>
 <p>
-Our experienced barbers are passionate about delivering excellent service and great haircuts.
+Our skilled barbers are passionate about delivering excellent service and great haircuts.
 </p>
+</div>
+
+</div>
 
 </section>
 
@@ -376,11 +402,17 @@ Our experienced barbers are passionate about delivering excellent service and gr
 
 <h2 class="section-title">Our Shop</h2>
 
-<img src="images/shop-front.jpg.png">
+<div class="services">
 
+<div class="card">
+<img src="images/shop-front.jpg.png">
+<h3>The Dream Barbershop</h3>
 <p>
-This is the front of The Dream Barbershop located in Parrish, Florida.
+This is the front of our barbershop located in Parrish, Florida.
 </p>
+</div>
+
+</div>
 
 </section>
 
