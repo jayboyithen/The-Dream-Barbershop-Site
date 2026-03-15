@@ -8,138 +8,125 @@
 
 <title>The Dream Barbershop</title>
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-html{
-scroll-behavior:smooth;
-}
+<style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
+font-family:'Poppins',sans-serif;
 background:#111;
 color:white;
 line-height:1.6;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+nav{
 background:black;
-padding:20px 8%;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+padding:16px 6%;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.logo-section{
+.nav-left{
 display:flex;
 align-items:center;
 }
 
 .logo{
-height:110px;
-margin-right:20px;
+height:80px;
+margin-right:15px;
 }
 
-.vertical-line{
-width:2px;
-height:70px;
-background:#facc15;
-margin-right:25px;
+.separator{
+margin:0 15px;
+font-size:22px;
+color:#facc15;
 }
 
-/* NAVIGATION */
-
-nav{
-display:flex;
-align-items:center;
+nav h2{
+font-family:'Playfair Display',serif;
+font-size:26px;
+letter-spacing:2px;
+color:#facc15;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
-font-size:18px;
-margin-right:35px;
+margin-left:16px;
+font-size:15px;
 }
 
 nav a::before{
-content:"• ";
+content:"•";
+margin-right:6px;
 color:#facc15;
 }
 
 /* HERO */
 
-.hero{
-height:85vh;
+header{
+height:90vh;
 background:
 linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-url("images/barbershop-interior.jpg.png");
-background-size:cover;
-background-position:center;
+url("images/barbershop-interior.jpg.png") center/cover no-repeat;
 display:flex;
 align-items:center;
-padding-left:8%;
+justify-content:center;
+text-align:center;
 }
 
 .hero h1{
+font-family:'Playfair Display',serif;
 font-size:60px;
-text-shadow:3px 3px 10px black;
-}
-
-.hero p{
-font-size:22px;
-margin-top:20px;
-max-width:650px;
-text-shadow:2px 2px 8px black;
+margin-bottom:20px;
 }
 
 .gold{
 color:#facc15;
 }
 
-/* BOOK BUTTON */
-
-.book-btn{
-display:inline-block;
-margin-top:40px;
-background:#facc15;
-color:black;
-padding:16px 34px;
-font-size:18px;
-font-weight:bold;
-text-decoration:none;
-border-radius:6px;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
 }
 
-.book-btn:hover{
-background:#eab308;
+.hero button{
+padding:15px 35px;
+border:none;
+background:#facc15;
+color:black;
+font-size:18px;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* SECTION */
 
-section{
-padding:50px 8%;
-}
-
-/* TITLES */
-
-.section-title{
-font-size:42px;
+.section{
+padding:70px 10%;
 text-align:center;
-margin-bottom:35px;
-letter-spacing:2px;
-color:#facc15;
-text-shadow:2px 2px 6px black;
 }
 
-/* CARDS */
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:40px;
+color:#facc15;
+}
+
+/* SERVICES */
 
 .services{
 display:grid;
@@ -147,17 +134,54 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.card{
+.service{
 background:#1f2937;
-padding:20px;
 border-radius:10px;
-text-align:center;
+overflow:hidden;
 }
 
-.card img{
+.service img{
 width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.service h3{
+margin:15px 0;
+}
+
+.service p{
+padding:0 20px 25px;
+font-size:14px;
+}
+
+/* WHY SECTION */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-box{
+background:#1f2937;
 border-radius:10px;
-margin-bottom:15px;
+overflow:hidden;
+}
+
+.why-box img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.why-box h3{
+margin:15px;
+}
+
+.why-box p{
+padding:0 20px 20px;
+font-size:14px;
 }
 
 /* CONTACT */
@@ -165,31 +189,24 @@ margin-bottom:15px;
 .contact{
 background:
 linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-url("images/contact-bg.jpg");
-background-size:cover;
-background-position:center;
+url("images/contact-bg.jpg") center/cover no-repeat;
+padding:90px 10%;
 text-align:center;
-padding:80px 8%;
 }
 
-.contact a{
-color:#facc15;
-font-weight:bold;
-font-size:20px;
-text-decoration:none;
+.contact-box{
+background:rgba(0,0,0,0.65);
+padding:40px;
+border-radius:8px;
+max-width:500px;
+margin:auto;
+text-align:left;
 }
-
-.contact a:hover{
-text-decoration:underline;
-}
-
-/* FOOTER */
 
 footer{
 background:black;
 text-align:center;
-padding:30px;
-color:#aaa;
+padding:25px;
 }
 
 </style>
@@ -198,170 +215,141 @@ color:#aaa;
 
 <body>
 
-<header>
+<nav>
 
-<div class="logo-section">
+<div class="nav-left">
 
 <img src="images/logo.png.png" class="logo">
 
-<div class="vertical-line"></div>
+<div class="separator">|</div>
+
+<h2>THE DREAM BARBERSHOP</h2>
 
 </div>
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero">
 
 <div>
 
-<h1>
-Great Haircuts.<br>
-<span class="gold">Great Service</span>
-</h1>
-
-<p>
-Welcome to The Dream Barbershop in Parrish, Florida. Professional cuts, fades, and beard grooming done with style and precision.
-</p>
-
-<a href="#contact" class="book-btn">Book Appointment</a>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#why">Why Choose Us</a>
+<a href="#contact">Contact</a>
 
 </div>
 
-</section>
+</nav>
 
-<!-- SERVICES -->
 
-<section id="services">
+<header>
 
-<h2 class="section-title">✂ Our Services</h2>
+<div class="hero">
+
+<h1>Great Haircuts<br><span class="gold">Great Service</span></h1>
+
+<p>Professional haircuts and fades in Parrish, Florida.</p>
+
+<button onclick="location.href='#contact'">Book Appointment</button>
+
+</div>
+
+</header>
+
+
+<section class="section" id="services">
+
+<h2>Barbershop Services</h2>
 
 <div class="services">
 
-<div class="card">
+<div class="service">
 <img src="images/service-barber.jpg.png">
 <h3>Barber Haircut</h3>
-<p>Professional barber haircut service delivered with attention to detail.</p>
+<p>Professional barber haircut with clean and sharp finish.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="images/service-fade.jpg.png">
-<h3>Fade Haircut</h3>
-<p>Modern fade styles designed for a clean and sharp look.</p>
+<h3>Female Haircut</h3>
+<p>Modern haircut styles designed for women.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="images/service-kids.jpg.png">
 <h3>Kids Haircut</h3>
-<p>Friendly haircut service for children in a comfortable environment.</p>
+<p>Friendly haircut service for children.</p>
 </div>
 
-</div>
-
-</section>
-
-<!-- HAIRCUT STYLES -->
-
-<section id="gallery">
-
-<h2 class="section-title">✨ Haircut Styles</h2>
-
-<div class="services">
-
-<div class="card">
-<img src="images/haircut-style1.jpg.png">
-<h3>Modern Haircut</h3>
-<p>Modern haircut style example.</p>
-</div>
-
-<div class="card">
+<div class="service">
 <img src="images/haircut-style2.jpg.png">
-<h3>Clean Fade</h3>
-<p>Sharp fade haircut with clean lines.</p>
+<h3>Hairstyle 1</h3>
+<p>Trendy haircut style popular with modern customers.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="images/haircut-style3.jpg.png">
-<h3>Professional Style</h3>
-<p>Professional haircut done with precision.</p>
+<h3>Hairstyle 2</h3>
+<p>Clean fade hairstyle designed for a sharp appearance.</p>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="images/haircut-style4.jpg.png">
-<h3>Fresh Look</h3>
-<p>Clean and modern hairstyle.</p>
+<h3>Hairstyle 3</h3>
+<p>Stylish haircut option perfect for everyday style.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- TEAM -->
 
-<section>
+<section class="section" id="why">
 
-<h2 class="section-title">Our Team</h2>
+<h2>Why Choose Our Barbershop</h2>
 
-<div class="services">
+<div class="why-grid">
 
-<div class="card">
+<div class="why-box">
 <img src="images/barber-team.jpg.png">
 <h3>Experienced Barbers</h3>
-<p>Our skilled barbers are passionate about delivering excellent service.</p>
+<p>Our professional barber team brings experience and skill to every haircut.</p>
 </div>
 
+<div class="why-box">
+<img src="images/haircut-style1.jpg.png">
+<h3>Modern Styles</h3>
+<p>We follow modern haircut trends and stylish fades.</p>
 </div>
 
-</section>
-
-<!-- SHOP -->
-
-<section>
-
-<h2 class="section-title">Our Shop</h2>
-
-<div class="services">
-
-<div class="card">
+<div class="why-box">
 <img src="images/shop-front.jpg.png">
-<h3>The Dream Barbershop</h3>
-<p>This is the front of our barbershop located in Parrish, Florida.</p>
+<h3>Clean Shop</h3>
+<p>A professional and clean barbershop environment for every customer.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
 
-<section id="contact" class="contact">
+<section class="contact" id="contact">
 
-<h2 class="section-title">Visit Us</h2>
+<h2>Visit Our Barbershop</h2>
 
-<p>
-<a href="https://www.google.com/maps/search/?api=1&query=8259+US+301+N+Parrish+FL+34219" target="_blank">
+<div class="contact-box">
+
+<p><strong>Phone:</strong> (941) 479-4217</p>
+
+<p><strong>Address:</strong><br>
 8259 US 301 N<br>
-Parrish, FL 34219
-</a>
-</p>
+Parrish, FL</p>
 
-<p>
-<a href="tel:+19414794217">
-(941) 479-4217
-</a>
-</p>
+<p><strong>Business Hours:</strong><br>
+Monday – Saturday<br>
+10 AM – 9 PM</p>
+
+</div>
 
 </section>
+
 
 <footer>
 
